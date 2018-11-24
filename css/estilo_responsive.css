@@ -1,0 +1,14 @@
+/*  
+		Templatte XGM CSS
+    Created on : 22-July.-2015, 10:00:00
+    Author     : Xavi Gonzalez <xavi@xavigonzalez.net>
+*/
+<style>
+@media (max-width: 600px) {
+
+#header{
+background-color:blue;
+}
+
+}
+</style>

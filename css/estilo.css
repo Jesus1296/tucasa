@@ -1,0 +1,126 @@
+/*  
+		Templatte XGM CSS
+    Created on : 22-July.-2015, 10:00:00
+    Author     : Xavi Gonzalez <xavi@xavigonzalez.net>
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#menutop{
+width:100vw;
+height:10%;
+background-color:rgba(176,176,176,0.3); 
+position: fixed;
+text-align:left;
+}
+#menutop img{
+margin:10px;
+display:inline;
+}
+#menutop ul{
+text-align:right;
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+margin-left:70%;
+margin-top:5vh;
+}
+
+#menutop ul li { 
+display: inline; 
+}
+
+#menutop ul li a{
+padding: .2em 1em;
+color:white;
+}
+
+.menutop{
+display:inline;
+position:absolute;
+top:10px;
+width:100%;
+right:20px;
+}
+
+
+#header{
+padding:5%;
+width:100%;
+height:100vh;
+background-image:url("../images/bg.jpg");
+background-size: cover;
+}
+
+#main{
+padding:5%;
+width:100%;
+height:150vh;
+background:#E5E5E5;
+}
+
+
+#contact{
+padding-top:5%;
+width:100%;
+height:100%;
+background:white;
+}
+
+#contact-form{
+border:1px solid;
+width:75%;
+margin:auto;
+padding:10px;
+}
+
+h3{
+color:#b3c100;
+}
+
+.btn{
+text-decoration:none;
+background-color:#E4E4E4;
+padding: .2em 1em;
+display:inline;
+}
+
+.homeleft{
+float:left; width:50%;;
+}
+.homeright{
+float:right;width:50%;;
+}
+
+.feat{
+width:33%;margin:auto;float:left;
+}
+
+
+.row .col.s12 {
+  width: 100% !important;
+  margin-left: 0;
+}
+#title{
+margin-top:10%;
+
+}
+
+footer.page-footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  background-color: #849DFF;
+}
