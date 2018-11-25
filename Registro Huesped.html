@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="Recursos/Bootstrap/include/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="Recursos/Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Recursos/Bootstrap/include/popper.min.js" type="text/javascript"></script>
+    <link href="Recursos/css/Ventas.css" rel="stylesheet" type="text/css" />
+    <script src="Recursos/js/Ventas.js" type="text/javascript"></script>
+    <title>Registrar&nbsp;huesped</title>
+</head>
+
+<body onload="regreso();">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- INICIO DE NAVBAR -->
+            <div class="container-fluid">
+                <header class="sticky-top">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                        <a href="#" class="navbar-brand text-white">Ventas</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ven_navbar" aria-controls="ven_navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="ven_navbar">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle text-white" id="inmueble" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inmueble</a>
+                                    <div class="dropdown-menu bg-primary" aria-labelledby="inmueble">
+                                        <a class="nav-link text-white" href="ConsultarRenta.jsp">Consultar&nbsp;rentas</a>
+                                        <a class="nav-link text-white" href="RegistrarRenta.jsp">Registrar&nbsp;renta</a>
+                                        <a class="nav-link text-white" href="ActualizarRenta.jsp">Actualizar&nbsp;renta</a>
+                                        <a class="navlink text-white" href="Cancelacion.jsp">Cancelaci&oacute;n</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle text-white" id="huesped" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Huesped</a>
+                                    <div class="dropdown-menu bg-primary" aria-labelledby="huesped">
+                                        <a class="nav-link text-white" href="ConsultarHuesped.jsp">Consultar</a>
+                                        <a class="nav-link text-white" href="RegistrarHuesped.jsp">Registrar</a>
+                                        <a class="nav-link text-white" href="ActualizarHuesped.jsp">Actualizar</a>
+                                        <a class="nav-link text-white" href="EliminarHuesped.jsp">Eliminar</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="ven_facturar.jsp" class="nav-link text-white">Facturar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../CerrarSesion" class="nav-link text-white">Cerrar&nbsp;sesi&oacute;n</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <!-- FIN DE NAVBAR -->
+        <div class="row">
+            <!-- INICIO DE SECCION PRINCIPAL -->
+            <div class="container-fluid">
+                <center>
+                    <form method="POST" autocomplete="off" action="../RegistrarHuesped" onsubmit="return validaHuesped();">
+                        <table>
+                            <tr>
+                                <td>
+                                    Nombre
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="nombreRegistrarHuesped" id="nombreRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Primer&nbsp;apellido
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="paternoRegistrarHuesped" id="paternoRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Segundo&nbsp;apellido
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="maternoRegistrarHuesped" id="maternoRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Pa&iacute;s&nbsp;de&nbsp;origen
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="paisRegistrarHuesped" id="paisRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Direcci&oacute;n
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="dirRegistrarHuesped" id="dirRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    C&oacute;digo&nbsp;postal
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control form-control-sm" name="codRegistrarHuesped" id="codRegistrarHuesped" maxlength="5" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Estado
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="estRegistrarHuesped" id="estRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Municipio
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="muniRegistrarHuesped" id="muniRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RFC
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="rfcRegistrarHuesped" id="rfcRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    N&uacute;mero&nbsp;de&nbsp;cuenta
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control form-control-sm" name="cuentaRegistrarHuesped" id="cuentaRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Raz&oacute;n
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="razonRegistrarHuesped" id="razonRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Calificaci&oacute;n
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control form-control-sm" name="CalificacionHuesped" id="CalifiacacionRegistrarHuesped" required="required" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <input type="submit" value="Registrar" class="btn btn-success" />
+                                </td>
+                            </tr>
+                        </table>
+
+                    </form>
+                </center>
+            </div>
+        </div>
+        <!-- FIN DE SECCION PRINCIPAL -->
+    </div>
+</body>
+
+</html>
